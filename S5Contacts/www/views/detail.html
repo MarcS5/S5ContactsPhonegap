@@ -1,0 +1,32 @@
+<div class="fixed">
+	<header ng-class="isAdmin ? 'right-padding' : ''">
+		<ul class="left">
+			<li><span class="ion-android-arrow-back" ng-click="historyBack()"></span></li>
+		</ul>
+		<a href="#/" class="logo">{{contact.firstName}} {{contact.inBetween}} {{contact.lastName}}</a>
+		<ul>
+			<li><span ng-click="toggleFavorite(contact.id)" ng-class="isFavorite ? 'ion-android-star' : 'ion-android-star-outline'"></span></li>
+			<li ng-show="isAdmin"><a href="#/edit/{{contact.id}}"><span class="ion-android-create"></span></a></li>
+		</ul>
+	</header>
+</div>
+<div class="content">
+	<div class="card">
+		<ul>
+			<li ng-show="contact.phoneNumber">
+				<a href="tel:{{contact.phoneNumber}}" data-rel="external">
+					<span class="ion-android-call"></span>
+					<strong>{{contact.phoneNumber}}</strong>
+					<i>Phone</i>
+				</a>
+			</li>
+			<li ng-show="contact.email">
+				<a href="mailto:{{contact.email}}" data-rel="external">
+					<span class="ion-android-mail"></span>
+					<strong>{{contact.email}}</strong>
+					<i>Email</i>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>

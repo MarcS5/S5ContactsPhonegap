@@ -1,0 +1,19 @@
+﻿/* RESET CSS
+=======================================================	*/ 
+*, *:after, *:before {-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-text-size-adjust:none;} 
+a {text-decoration:none;}
+ul, ul li, dl, dt, dd,sup,sub, ol, ol li {margin:0;padding:0;list-style:none;}
+dt,dd {display:block;float:left;}
+h1,h2,h3,h4,h5,h6 {margin:0;font-size:12px;font-weight:normal}
+body,html,h1,h2,h3,h4,h5,h6,form,p,blockquote,fieldset,input {margin:0;padding:0;}
+a img, fieldset {border:none;}
+th {text-align:left;}
+a:focus,input:focus {outline:0;}
+address {font-style:normal;}
+textarea {resize:none}
+header, nav, footer, section, aside, figure, figcaption, details, article, time {display:block;margin:0;padding:0;}
+input[type=submit] {-webkit-appearance:button;}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {-webkit-appearance:none;-o-appearance:none;margin:0;}
+input::-ms-clear {display:none;} 
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {-webkit-appearance:none;margin:0;}

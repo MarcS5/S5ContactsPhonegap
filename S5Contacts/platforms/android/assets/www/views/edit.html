@@ -1,0 +1,47 @@
+<div class="fixed">
+	<header>
+		<ul class="left">
+			<li><span class="ion-android-arrow-back" ng-click="historyBack()"></span></li>
+		</ul>
+		<span class="logo" ng-show="contact.id">Edit contact</span>
+		<span class="logo" ng-show="!contact.id">Add contact</span>
+		<ul>
+			<li ng-show="isAdmin"><span class="ion-android-done" ng-click="saveContact(contact)"></span></li>
+		</ul>
+	</header>
+</div>
+<div class="content">
+	<div class="error-message" ng-show="errorMessage">
+		{{errorMessage}}
+	</div>
+
+
+	<form class="form" name="contactForm" ng-show="!hideForm" novalidate>
+		<input type="hidden" ng-model="contact.id" />
+		<div>
+			<input type="text" name="firstName" ng-model="contact.firstName" placeholder="First name" required />
+			<span class="error" ng-show="contactForm.$submitted || contactForm.firstName.$touched">
+				<span ng-show="contactForm.firstName.$error.required">First name is required.</span>
+			</span>
+		</div>
+		<div>
+			<input type="text" ng-model="contact.inBetween" placeholder="Middle name" />
+		</div>
+		<div>
+			<input type="text" ng-model="contact.lastName" placeholder="Last name" />
+		</div>
+		<div>
+			<input type="tel" ng-model="contact.phoneNumber" placeholder="Phone number" />
+		</div>
+		<div>
+			<input type="email" ng-model="contact.email" placeholder="Email" ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/" />
+			<span class="error" ng-show="contactForm.$submitted || contactForm.firstName.$touched">
+				<span ng-show="contactForm.firstName.$error.email">First name is required.</span>
+			</span>
+		</div>
+
+		<div class="remove" ng-show="contact.id && isAdmin">
+			<span ng-click="deleteContact(contact)" class="ion-android-delete">Remove contact</span>
+		</div>
+	</form>
+</div>

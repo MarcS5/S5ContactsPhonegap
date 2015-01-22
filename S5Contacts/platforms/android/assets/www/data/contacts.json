@@ -1,0 +1,84 @@
+﻿{
+	"contacts": [
+		{
+			"id": 0,
+			"firstName": "Marc",
+			"lastName": "Veens",
+			"phoneNumber": "0687778787",
+			"email": "marc.veens@s5.nl"
+		},
+		{ 
+			"id": 1,
+			"firstName": "Maurice",
+			"inBetween": "den",
+			"lastName": "Engelsman",
+			"phoneNumber": "0623458164",
+			"email": "maurice@s5.nl"
+		},
+		{ 
+			"id": 2,
+			"firstName": "Tai-Chow",
+			"lastName": "Andrae",
+			"phoneNumber": "0615072668",
+			"email": "tc@s5.nl"
+		},
+		{ 
+			"id": 3,
+			"firstName": "Andries",
+			"inBetween": "van der",
+			"lastName": "Werf",
+			"phoneNumber": "0617992895",
+			"email": "andries@s5.nl"
+		},
+		{ 
+			"id": 4,
+			"firstName": "Frans",
+			"lastName": "Boot",
+			"phoneNumber": "0624196081",
+			"email": "frans@s5.nl"
+		},
+		{ 
+			"id": 5,
+			"firstName": "Romy",
+			"lastName": "Broersen",
+			"email": "romy@s5.nl"
+		},
+		{ 
+			"id": 6,
+			"firstName": "Ibrahim",
+			"lastName": "Duz",
+			"email": "ibrahim.duz@s5.nl"
+		},
+		{ 
+			"id": 7,
+			"firstName": "Arjan",
+			"lastName": "Siemons",
+			"email": "arjan@s5.nl"
+		},
+		{ 
+			"id": 8,
+			"firstName": "Leonne",
+			"lastName": "Verkade",
+			"email": "leonne@s5.nl"
+		},
+		{ 
+			"id": 9,
+			"firstName": "Johan",
+			"lastName": "Alkemade",
+			"email": "johan.alkemade@s5.nl"
+		},
+		{ 
+			"id": 10,
+			"firstName": "Xander",
+			"inBetween": "van den",
+			"lastName": "Berg",
+			"email": "xander.van.den.berg@s5.nl"
+		},
+		{ 
+			"id": 11,
+			"firstName": "Nick",
+			"lastName": "Hummel",
+			"email": "nick@s5.nl"
+		}
+	]
+}
