@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html ng-app="contactsApp">
+<head>
+	<title ng-bind="Page.title()">S5 Contacts</title>
+	<meta charset="UTF-8" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="theme-color" content="#0288d1" />
+	<link rel="shortcut icon" sizes="196x196" href="images/icons/icon-196x196.png?1">
+	<link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-icon-57x57.png?1" />
+	<link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-icon-72x72.png?1" />
+	<link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple-icon-114x114.png?1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+
+	<link type="text/css" rel="stylesheet" href="css/ionicons.css" />
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+
+	<script src="cordova.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+	<script src="js/angular-resource.min.js"></script>
+	<script src="js/angular-sanitize.min.js"></script>
+	<script src="js/ngToast.min.js"></script>
+	<script src="js/extra/registerPush.js"></script>
+	<script src="js/app/services.js"></script>
+	<script src="js/app/filters.js"></script>
+	<script src="js/app/controllers.js"></script>
+	<script src="js/app/routes.js"></script>
+	<script src="js/app/application.js"></script>
+</head>
+<body ng-controller="MainController" class="{{bodyClass}}" onload="init();">
+	<div class="fixed" ng-class="searchActive ? 'search-active' : ''">
+		<header>
+			<a href="#/" class="logo">S5 Contacts</a>
+			<ul>
+				<li><span ng-click="openSearch()" class="ion-android-search"></span></li>
+			</ul>
+		</header>
+		<div class="search">
+			<span ng-click="goBack()" class="ion-android-arrow-back"></span>
+			<input type="text" ng-model="search" id="searchInput" placeholder="Find contacts" />
+			<span ng-click="clearSearch()" class="ion-android-close"></span>
+		</div>
+		<nav class="main">
+			<ul>
+				<li ng-class="bodyClass === 'favorites' ? 'active' : ''"><a href="#/favorites">Favorites</a></li>
+				<li ng-class="bodyClass === 'overview' ? 'active' : ''"><a href="#/">All contacts</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<div class="container" ng-view></div>
+
+	<toast></toast>
+</body>
+</html>

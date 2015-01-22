@@ -1,0 +1,13 @@
+<div class="content">
+	<ul class="list">
+		<li ng-repeat="contact in ContactList = (contacts | filter:search | orderBy:'lastName')">
+			<a href="#/contact/{{contact.id}}">
+				<figure><img ng-src="{{contact.picture | profilePicture }}" /></figure>
+				{{contact.firstName}} {{contact.inBetween}} {{contact.lastName}}
+			</a>
+		</li>
+	</ul>
+	<span ng-show="!ContactList.length" class="no-results">No results found</span>
+
+	<a href="#/edit/" class="add" ng-show="isAdmin"><span class="ion-android-person-add"></span></a>
+</div>
